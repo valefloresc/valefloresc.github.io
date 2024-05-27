@@ -70,3 +70,9 @@ ul {
     transition: all 0.3s ease;
 }
 
+body {
+  background-image: url('fotobacteria1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(163, 189, 111, 0.2);
+}
