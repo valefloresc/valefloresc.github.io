@@ -12,7 +12,7 @@ ul {
   
   li a {
     display: block;
-    color: white;
+    color: rgb(168, 21, 21);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -28,6 +28,7 @@ ul {
     align-items: center;
     min-height: 8vh;
     background-color: #ffffff;
+    opacity: ;
     font-family: 'lato', sans-serif;
 }
 
@@ -71,8 +72,14 @@ ul {
 }
 
 body {
+  background-image: url('Portada\ bio.jpg');
+  background-size: cover;
+  background-position: center;
+  }
+
+  /* Si deseas aplicar la imagen de fondo solo a una sección específica del home, puedes utilizar una clase o un id */
+.home-section {
   background-image: url('fotobacteria1.jpeg');
   background-size: cover;
   background-position: center;
-  background-color: rgba(163, 189, 111, 0.2);
 }
