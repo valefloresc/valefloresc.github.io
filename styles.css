@@ -122,7 +122,7 @@ nav a {
 
 .profile-info h1 {
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 ul {
@@ -132,4 +132,33 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+/* Para galeria de cada proyecto */
+
+ /* Agrega un margen alrededor de todo el cuerpo */
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin: 200px;
+}
+
+.image-wrapper {
+    margin: auto; /* Centra las imágenes dentro de la cuadrícula */
+}
+
+.imagen-proyecto {
+    width: 100%;
+    height: auto;
+}
+.large-image {
+    width: 100%; /* Ancho deseado para la imagen grande */
+    height: 100%; /* Altura deseada para la imagen grande */
 }
