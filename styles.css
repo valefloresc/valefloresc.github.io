@@ -8,7 +8,7 @@ body {
 
 /* Estilos del header y la navegación */
 header {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 10px 0;
 }
 
@@ -135,8 +135,6 @@ ul li {
 }
 
 /* Para galeria de cada proyecto */
-
- /* Agrega un margen alrededor de todo el cuerpo */
 
 .container {
     text-align: center;
