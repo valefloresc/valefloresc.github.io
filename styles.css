@@ -78,10 +78,7 @@ nav a {
     align-items: flex-start;
     padding: 20px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: 20px auto;
+
 }
 
 .timeline {
@@ -89,7 +86,8 @@ nav a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 20px;
+    margin-right: 3em;
+    margin-left: 5em;
 }
 
 .timeline ul {
@@ -100,24 +98,32 @@ nav a {
 
 .timeline li {
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.2;
+
+}
+.timeline p {
+    margin-bottom: 0,5px; /* Ajusta este valor para cambiar el espacio entre párrafos */
 }
 
 .profile-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 3em;
 }
 
 .profile-pic img {
     border-radius: 50%;
     width: 300px;
+    max-width: 300px;
     height: 300px;
     object-fit: cover;
 }
 
 .profile-info {
     margin-top: 60px;
+    max-width: 300px; /* Ajusta este valor al ancho de tu imagen */
+    text-align: justify;
 }
 
 .profile-info h1 {
@@ -134,29 +140,112 @@ ul li {
     margin-bottom: 10px;
 }
 
+
 /* Para galeria de cada proyecto */
 
 .container {
     text-align: center;
-    margin-top: 100px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espacio entre las imágenes */
-    margin: 200px;
-}
-
-.image-wrapper {
-    margin: auto; /* Centra las imágenes dentro de la cuadrícula */
+    text-align: center;
+    margin-top: 50px;
+    max-width: 400px; /* Ajusta este valor según el ancho deseado */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Espaciado horizontal */
 }
 
 .imagen-proyecto {
-    width: 100%;
+    width: 10em; /* Tamaño base para las imágenes pequeñas */
     height: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 20px;
 }
+.gallery {
+    text-align: center; /* Asegura que las imágenes estén centradas */
+    margin-top: 50px; /* Espaciado opcional entre el texto y la galería */
+}
+
 .large-image {
-    width: 100%; /* Ancho deseado para la imagen grande */
-    height: 100%; /* Altura deseada para la imagen grande */
+    margin-top: 20px; /* Espacio opcional para separarla de la galería */
+}
+
+.large-image img {
+    width: 60%; /* Ancho deseado para la imagen grande */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
+    display: block; /* Para centrarla horizontalmente */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título de la página */
+.contact-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la información de contacto */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Estilo para cada elemento de contacto */
+.contact-item {
+    width: 45%;
+
+}
+
+/* Títulos de los elementos de contacto */
+.contact-item h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Enlaces de contacto */
+.contact-item a {
+    color: #579810;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .profile-pic {
+        margin: 0 auto; /* Centrar el contenedor de la imagen */
+    margin-right: 3em;
+    margin-left: 3em;
+    }
+    .profile-pic img{
+        width: 200px; /* Ancho reducido para pantallas pequeñas */
+        height: auto; /* Alto reducido para pantallas pequeñas */
+    }
+    .profile-info {
+        margin-right: 3em;
+
+    }
+    .timeline  {
+        margin-top: 20px;
+        width: 50%;
+        text-align:left;
+        margin-left: 3em;
+    }
+    .contact-item {
+        width: 100%;
+    }
 }
