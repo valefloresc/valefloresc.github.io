@@ -74,7 +74,7 @@ nav a {
 
 .about-content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-start;
     padding: 20px;
     background-color: white;
@@ -87,8 +87,22 @@ nav a {
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 3em;
-    margin-left: 5em;
+    margin-left: 15em;
+    margin-top: auto;
+    text-align: left;
+    position: relative;
+    padding: 0 40px;
 }
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px; /* Ajusta según sea necesario */
+    width: 2px;
+    height: 100%;
+    background-color: #272727; /* Color de la línea */
+}
+
 
 .timeline ul {
     list-style: none;
@@ -195,7 +209,9 @@ ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items:center;
+    flex-direction: column;
+
 }
 
 /* Estilo para cada elemento de contacto */
