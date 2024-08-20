@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
-</head>
+    <body class="project-page">
 <body>
     <header>
       <nav>
@@ -27,17 +27,60 @@
         <p>Banco modular de tulipas de madera de Jatoba curvada.</p>
         <p>Diseño desarrollado a partir de la experimentación del tejido de materiales orgánicos fibrosos.</p>
     </div>
-
-        <div class="gallery">
-            <img src="imagenes/Nodo 1.jpg" alt="Proyecto Brea 1" class="imagen-proyecto">
-            <img src="imagenes/Nodo 2.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-            <img src="imagenes/Nodo detalle.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-            <img src="imagenes/Nodo detalle 2.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-            <img src="imagenes/nodo croquis.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-            <img src="imagenes/Nodo 3.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-            <!-- Agrega más imágenes según sea necesario -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="imagenes/Nodo 1.jpg" alt="Imagen brea 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Nodo 2.jpg" alt="Imagen brea 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Nodo 3.jpg" alt="Imagen brea 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Nodo detalle.jpg" alt="Imagen brea croquis2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/Nodo detalle 2.jpg" alt="Imagen brea croquis">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagenes/nodo croquis.jpg" alt="Imagen brea 3">
+            </div>
+            <!-- Añade más imágenes según sea necesario -->
         </div>
-        <div class="image-wrapper large-image">
-            <img src="imagenes/Nodo grande.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
-        </div>
+    </div>
+    <div class="image-wrapper large-image">
+        <img src="imagenes/Nodo grande.jpg" alt="Proyecto Brea 2" class="imagen-proyecto">
+    </div>
+    
+        <script>
+               const carousel = document.querySelector('.carousel');
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentIndex = 0;
+    
+            // Duplicar las imágenes para el efecto de loop infinito
+            const totalSlides = slides.length;
+            carousel.appendChild(slides[0].cloneNode(true));
+            carousel.prepend(slides[totalSlides - 1].cloneNode(true));
+    
+            function showNextSlide() {
+                currentIndex++;
+                carousel.style.transition = 'transform 0.5 s ease-in-out';
+                const offset = -(currentIndex * 100 / 3); // Ajusta el desplazamiento
+                carousel.style.transform = `translateX(${offset}%)`;
+    
+                // Verificar si hemos llegado al final o al inicio de las imágenes duplicadas
+                if (currentIndex === totalSlides) {
+                    setTimeout(() => {
+                        carousel.style.transition = 'none';
+                        currentIndex = 0;
+                        carousel.style.transform = `translateX(0%)`;
+                    }, 500);
+                }
+            }
+    
+            setInterval(showNextSlide, 1800);
+    </script>
+    
     </div>

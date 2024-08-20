@@ -2,6 +2,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+    margin-bottom: 3em;
     padding: 0;
     box-sizing: border-box;
 }
@@ -154,31 +155,9 @@ ul li {
     margin-bottom: 10px;
 }
 
-
-/* Para galeria de cada proyecto */
-
-.container {
-    text-align: center;
-    text-align: center;
-    margin-top: 50px;
-    max-width: 400px; /* Ajusta este valor según el ancho deseado */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px; /* Espaciado horizontal */
+.project-page {
+    margin-bottom: 3em; /* Margen inferior blanco específico para páginas de proyecto */
 }
-
-.imagen-proyecto {
-    width: 10em; /* Tamaño base para las imágenes pequeñas */
-    height: auto;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 20px;
-}
-.gallery {
-    text-align: center; /* Asegura que las imágenes estén centradas */
-    margin-top: 50px; /* Espaciado opcional entre el texto y la galería */
-}
-
 .large-image {
     margin-top: 20px; /* Espacio opcional para separarla de la galería */
 }
@@ -189,6 +168,66 @@ ul li {
     max-width: 100%; /* Asegura que no se desborde del contenedor */
     display: block; /* Para centrarla horizontalmente */
     margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.container {
+   display: flex;
+    flex-direction: row; /* Cambia la dirección de columna a fila */
+    align-items: flex-start;
+    justify-content: space-between; /* Espacio uniforme entre la izquierda y la derecha */
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+
+}
+
+.texto {
+    align-items: center;
+    flex: 2; /* Ocupa más espacio en el contenedor */
+    margin-right: 10em; /* Espacio entre la descripción y la lista de herramientas */
+    max-width: 500px;
+
+}
+
+.herramientas {
+    flex: 1; /* Ocupa menos espacio en el contenedor */
+
+}
+
+h1, p {
+    margin: 0; /* Elimina el margen por defecto para mayor control */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+p {
+    margin-bottom: 10px; /* Espacio entre párrafos */
+}
+/* Contenedor principal del carrusel */
+.carousel-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px; /* Ajusta la altura según lo desees */
+    background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente opcional */
+    display: flex;
+    justify-content: center; /* Centra el carrusel horizontalmente */
+    align-items: center;
+    overflow: hidden; /* Oculta las imágenes fuera de la vista */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 calc(33.33% - 20px); /* Tres imágenes visibles con espacio entre ellas */
+    margin: 0 10px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%; /* Asegura que todas las imágenes tengan la misma altura */
+    object-fit: cover; /* Ajusta la imagen para que ocupe el espacio sin deformarse */
+    border-radius: 10px; /* Bordes redondeados opcional */
 }
 
 .contact-container {
